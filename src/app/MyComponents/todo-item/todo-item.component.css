@@ -1,0 +1,20 @@
+.strike{
+    
+    text-decoration: line-through;
+    
+}
+
+#check{
+    float: left;
+
+}
+#main4{
+    color: brown;
+}
+#main5{
+    text-align:right;
+}
+#check input:checked  {
+    background-color: green;
+  }
+
