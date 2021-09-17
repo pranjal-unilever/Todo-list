@@ -13,8 +13,28 @@
 }
 #main5{
     text-align:right;
+    margin: 4px 2px;
 }
 #check input:checked  {
     background-color: green;
   }
+#main8{
+    
+   
+    width: auto;
+    float: right;
+    
+    
+   
+}
+.button1{border-radius: 100px;
+    background-color: red;
+    border-color: black;
 
+}
+.button2{
+    border-radius: 100px;
+    background-color: blue;
+    border-color:black;
+
+}

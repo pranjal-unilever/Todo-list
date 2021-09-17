@@ -23,17 +23,26 @@ export class TodosComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  editTodo(todo:Todo){
+    const idx = this.todos.indexOf(todo)
+    let title = this.todos[idx].title;
+    let result = prompt("Edit Task Title", title);
+    if (result !== null && result !== ""){
+      this.todos[idx].title = result;
+    }
+
+  }
 
   deleteTodo(todo:Todo){
     console.log(todo);
     const index = this.todos.indexOf(todo);
     this.todos.splice(index, 1);
-    //localStorage.setItem("todos", JSON.stringify(this.todos));
+    localStorage.setItem("todos", JSON.stringify(this.todos));
   }
   addTodo(todo:Todo){
     console.log(todo); 
     this.todos.push(todo); 
-    //localStorage.setItem("todos", JSON.stringify(this.todos));
+    localStorage.setItem("todos", JSON.stringify(this.todos));
   }
   toggleTodo(todo:Todo){ 
     const index = this.todos.indexOf(todo);
