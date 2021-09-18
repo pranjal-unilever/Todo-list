@@ -33,9 +33,9 @@ export class TodosComponent implements OnInit {
 
   }
 
-  deleteTodo(todo:Todo){
-    console.log(todo);
-    const index = this.todos.indexOf(todo);
+  deleteTodo(i){
+    
+    const index = i;
     this.todos.splice(index, 1);
     localStorage.setItem("todos", JSON.stringify(this.todos));
   }
@@ -48,7 +48,7 @@ export class TodosComponent implements OnInit {
     const index = this.todos.indexOf(todo);
     console.log(index)
     this.todos[index].active = !this.todos[index].active;
-    //localStorage.setItem("todos", JSON.stringify(this.todos));
+    localStorage.setItem("todos", JSON.stringify(this.todos));
     
     console.log(todo)
   }
