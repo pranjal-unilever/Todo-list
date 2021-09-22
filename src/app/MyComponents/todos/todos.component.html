@@ -1,6 +1,24 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" >
+    <div class="container-fluid" id="main">
+      <a class="navbar-brand" routerLink="/" id="main1">Todos list App</a>
+      </div>
+      <div id="main11">
+        <button type="button" (click)="btnClick()" >Log out</button>
+    </div>
+    
+  </nav>
+  
+  
 <div class="container">
     <h3 class="text-center mb-3"  id="main2">Todo List </h3><br>
-    <h3> The user login as:</h3>
+
+    
+    <!-- <app-about (childEvent)="message=$event"> </app-about> -->
+    <div id="log1">
+        <h5>{{this.message}}</h5>
+    </div>
+    
 
     <app-add-todo (todoAdd)="addTodo($event)"></app-add-todo>
     
@@ -12,6 +30,3 @@
         </div>
     </ng-template>
 </div> 
-<div id="main11">
-    <button type="button" (click)="btnClick()" class="btn-btn-secondary md-2">Log out</button>
-</div>

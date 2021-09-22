@@ -10,7 +10,7 @@ import { Todo } from 'src/app/Todo';
 export class AddTodoComponent implements OnInit {
   title:string;
   desc:string;
-  @Input () delteme : number;
+  
   
   
  

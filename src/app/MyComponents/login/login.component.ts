@@ -1,16 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
+import { FormGroup,FormBuilder,Validators} from '@angular/forms';
 import { Router } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { EventEmitter } from '@angular/core';
 
 
 @Component({
-  selector: 'app-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
-export class AboutComponent implements OnInit {
+export class LoginComponent implements OnInit {
+
   registerForm: FormGroup;
   submitted = false;
+  title1:string;
+  @Output() public childEvent = new EventEmitter();
 
 
   constructor(private router: Router,private formBuilder: FormBuilder) { }
@@ -30,13 +34,10 @@ export class AboutComponent implements OnInit {
     if (this.registerForm.invalid) {
         return;
     }
+    this.childEvent.emit(this.title1);
 
     this.router.navigateByUrl('/TODOS');
 };
-
-
-
-
 
 
 }

@@ -4,6 +4,7 @@ import { Todo } from "../../Todo";
 import { Router } from '@angular/router';
 
 
+
 @Component({
   selector: 'app-todos',
   templateUrl: './todos.component.html',
@@ -12,6 +13,9 @@ import { Router } from '@angular/router';
 export class TodosComponent implements OnInit {
   localItem: string;
   todos:Todo[];
+  message:string;
+  Count1:number;
+  Count2:number;
   constructor(private router: Router) { 
     this.localItem = localStorage.getItem("todos");
     if(this.localItem == null){
@@ -36,27 +40,30 @@ export class TodosComponent implements OnInit {
   }
 
   deleteTodo(i){
-    
     const index = i;
     this.todos.splice(index, 1);
+    this.Count1=this.todos.length;
+    
     localStorage.setItem("todos", JSON.stringify(this.todos));
+
   }
   addTodo(todo:Todo){
     console.log(todo); 
     this.todos.push(todo); 
+    this.Count1=this.todos.length;
+
     localStorage.setItem("todos", JSON.stringify(this.todos));
   }
   toggleTodo(todo:Todo){ 
     const index = this.todos.indexOf(todo);
-    console.log(index)
+    // console.log(index)
     this.todos[index].active = !this.todos[index].active;
+    
     localStorage.setItem("todos", JSON.stringify(this.todos));
     
     console.log(todo)
   }
   btnClick() {
-   
-
     this.router.navigateByUrl('/');
 };
 
