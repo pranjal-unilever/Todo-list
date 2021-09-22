@@ -1,6 +1,8 @@
 import { stringify } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';  
 import { Todo } from "../../Todo";
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-todos',
@@ -10,7 +12,7 @@ import { Todo } from "../../Todo";
 export class TodosComponent implements OnInit {
   localItem: string;
   todos:Todo[];
-  constructor() { 
+  constructor(private router: Router) { 
     this.localItem = localStorage.getItem("todos");
     if(this.localItem == null){
     this.todos = [];
@@ -52,4 +54,13 @@ export class TodosComponent implements OnInit {
     
     console.log(todo)
   }
+  btnClick() {
+   
+
+    this.router.navigateByUrl('/');
+};
+
+
+
+
 }
