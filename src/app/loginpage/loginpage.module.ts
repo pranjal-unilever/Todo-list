@@ -2,8 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { LoginpageComponent } from './loginpage/loginpage.component';
+import { Routes , RouterModule } from '@angular/router';
 
+const routes: Routes = [
+  {
+    path:'', component:LoginpageComponent
+  }
 
+]
 
 @NgModule({
   declarations: [
@@ -11,8 +17,14 @@ import { LoginpageComponent } from './loginpage/loginpage.component';
     LoginpageComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild(routes)
   ],
-  exports:[LoginpageComponent]
+  
 })
-export class LoginpageModule { }
+export class LoginpageModule {
+  constructor(){
+    console.log("Pranjal my name")
+
+  }
+ }

@@ -7,6 +7,7 @@ import { TodosComponent } from './MyComponents/todos/todos.component';
 const routes: Routes = [
   { path: '', component: LoginComponent},
   { path: 'TODOS', component:TodosComponent },
+  {path: 'logindata', loadChildren:'./loginpage/loginpage.module#LoginpageModule'}
 ];
 
 @NgModule({

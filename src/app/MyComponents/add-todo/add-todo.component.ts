@@ -31,6 +31,7 @@ export class AddTodoComponent implements OnInit {
      
       active: true
     }
+    console.log(this.title);
     this.todoAdd.emit(todo);
     this.title=' ';
     this.Count++;

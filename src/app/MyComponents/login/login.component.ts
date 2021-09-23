@@ -2,7 +2,8 @@ import { Component, OnInit, Output } from '@angular/core';
 import { FormGroup,FormBuilder,Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 import { EventEmitter } from '@angular/core';
-import { logdata } from 'src/app/logdata';
+import { LoginfoService } from 'src/app/loginfo.service';
+
 
 
 @Component({
@@ -15,11 +16,11 @@ export class LoginComponent implements OnInit {
   registerForm: FormGroup;
   submitted = false;
   title1:string;
+  
 
-  @Output() logadd: EventEmitter<logdata> = new EventEmitter();
+  
 
-
-  constructor(private router: Router,private formBuilder: FormBuilder) { }
+  constructor(private router: Router,private formBuilder: FormBuilder, public logininfoservice : LoginfoService) { }
 
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
@@ -37,15 +38,17 @@ export class LoginComponent implements OnInit {
         return;
     }
 
-    const logdata = {
-
-      email:this.title1
-    }
-    this.logadd.emit(logdata)
+    this.logininfoservice.info(this.registerForm.controls['email'].value)
+    
+       
+    
+    
     
 
     this.router.navigateByUrl('/TODOS');
+    
 };
+
 
    
   

@@ -2,7 +2,7 @@ import { stringify } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';  
 import { Todo } from "../../Todo";
 import { Router } from '@angular/router';
-import { logdata } from "../../logdata";
+import { LoginfoService } from 'src/app/loginfo.service';
 
 
 
@@ -14,11 +14,11 @@ import { logdata } from "../../logdata";
 export class TodosComponent implements OnInit {
   localItem: string;
   todos:Todo[];
-  datas:logdata;
-  message:string;
+  
+  
   Count1:number;
   Count2:number;
-  constructor(private router: Router) { 
+  constructor(private router: Router,public logininfoservice : LoginfoService) { 
     this.localItem = localStorage.getItem("todos");
     if(this.localItem == null){
     this.todos = [];
@@ -26,6 +26,7 @@ export class TodosComponent implements OnInit {
     else{ 
       this.todos = JSON.parse(this.localItem); 
     }
+   this.localItem =this.logininfoservice.info;
 
    }
 
@@ -47,12 +48,7 @@ export class TodosComponent implements OnInit {
     this.Count1=this.todos.length;
     localStorage.setItem("todos", JSON.stringify(this.todos));
   }
-  addlog(logdata:logdata){
-    this.message=this.datas.email
-    console.log(this.message)
-
-
-  }
+ 
 
   addTodo(todo:Todo){
     console.log(todo); 
