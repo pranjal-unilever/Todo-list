@@ -8,6 +8,9 @@ import { TodoItemComponent } from './MyComponents/todo-item/todo-item.component'
 import { AddTodoComponent } from './MyComponents/add-todo/add-todo.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './MyComponents/login/login.component';
+import { LoginpageModule } from './loginpage/loginpage.module';
+
+
 
 
 
@@ -25,7 +28,8 @@ import { LoginComponent } from './MyComponents/login/login.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    LoginpageModule
     
     
   ],

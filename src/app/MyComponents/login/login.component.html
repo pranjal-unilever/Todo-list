@@ -3,8 +3,8 @@
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <h3><strong>Log in</strong></h3>
-                <form #userForm="ngForm" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-                     <!-- {{userForm.value | json}} -->
+                <form  [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                     <!-- {{registerForm.value | json}} -->
                     <div class="form-group">
                         <label for="title1">username</label>
                         <input type="text" [(ngModel)]="title1" id="title1" name="title1" placeholder="Type yurs username" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" ngModel>
