@@ -8,22 +8,12 @@
     </div>
     
   </nav>
-  <!-- <h2> {{}}</h2> -->
+   <h2> The user logged as:{{this.item}}</h2> 
   
   
 <div class="container">
     <h3 class="text-center mb-3"  id="main2">Todo List </h3><br>
-
-    
-    <!-- <app-about (childEvent)="message=$event"> </app-about> -->
-  
-        
-    
-    
-    <!-- <app-login (logadd)="addlog($event)"> </app-login> -->
-    
-
-    <app-add-todo (todoAdd)="addTodo($event)"></app-add-todo>
+     <app-add-todo (todoAdd)="addTodo($event)"></app-add-todo>
     
     <div *ngIf="this.todos.length===0; else elseBlock">No Todos to display</div>
     <ng-template #elseBlock>

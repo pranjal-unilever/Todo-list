@@ -37,15 +37,12 @@ export class LoginComponent implements OnInit {
     if (this.registerForm.invalid) {
         return;
     }
-
-    this.logininfoservice.info(this.registerForm.controls['email'].value)
-    
-       
-    
-    
-    
-
     this.router.navigateByUrl('/TODOS');
+
+    this.logininfoservice.setinfo(this.registerForm.controls['email'].value);
+    console.log(this.logininfoservice.datamain);
+    
+    
     
 };
 

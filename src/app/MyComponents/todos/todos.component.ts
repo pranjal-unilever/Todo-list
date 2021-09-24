@@ -14,11 +14,13 @@ import { LoginfoService } from 'src/app/loginfo.service';
 export class TodosComponent implements OnInit {
   localItem: string;
   todos:Todo[];
+  public item ="";
   
   
   Count1:number;
   Count2:number;
   constructor(private router: Router,public logininfoservice : LoginfoService) { 
+    
     this.localItem = localStorage.getItem("todos");
     if(this.localItem == null){
     this.todos = [];
@@ -26,11 +28,15 @@ export class TodosComponent implements OnInit {
     else{ 
       this.todos = JSON.parse(this.localItem); 
     }
-   this.localItem =this.logininfoservice.info;
+    
+   
 
    }
 
   ngOnInit(): void {
+     
+    this.item =this.logininfoservice.getinfo();
+    console.log(this.item)
   }
   editTodo(todo:Todo){
     const idx = this.todos.indexOf(todo)

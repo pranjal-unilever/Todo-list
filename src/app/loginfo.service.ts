@@ -4,15 +4,15 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class LoginfoService {
-  datamain:any;
+  datamain:string;
   constructor() { }
  
 
-   public set info(val) {
+   public setinfo(val) : void{
     this.datamain = val;
   }
 
-  public get info() {
+  public getinfo():string {
     return this.datamain;
   }
    
