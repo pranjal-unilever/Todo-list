@@ -36,7 +36,7 @@ export class TodosComponent implements OnInit {
   ngOnInit(): void {
      
     this.item =this.logininfoservice.getinfo();
-    console.log(this.item)
+    
   }
   editTodo(todo:Todo){
     const idx = this.todos.indexOf(todo)

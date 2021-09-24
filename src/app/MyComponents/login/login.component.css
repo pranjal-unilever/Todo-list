@@ -2,9 +2,7 @@
  .container{
      
      padding: 20%;
-     background-color: yellow;
-     height: 50%;
-
+     
      
     
 
@@ -14,6 +12,9 @@
     height: 100%;
     
     margin-bottom: 0%;
+}
+#main12{
+    float: right;
 }
     
 

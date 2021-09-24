@@ -40,11 +40,9 @@ export class LoginComponent implements OnInit {
     this.router.navigateByUrl('/TODOS');
 
     this.logininfoservice.setinfo(this.registerForm.controls['email'].value);
-    console.log(this.logininfoservice.datamain);
     
     
-    
-};
+  };
 
 
    

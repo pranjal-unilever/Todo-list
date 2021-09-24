@@ -1,5 +1,9 @@
 <div class="my-3"> 
     <h5 [ngClass]="{'strike': !todo.active}">{{todo.title}}</h5>
+    <div id=main23>
+      <h5> This todo is written by:{{this.value}} </h5>
+    </div>
+    
  
     <div id="check" class="form-group form-check">
         <input type="checkbox" class="form-check-input" id="todo{{i}}" (click)="onCheckboxClick(todo)" [checked]="!todo.active">

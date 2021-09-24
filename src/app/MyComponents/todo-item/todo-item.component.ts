@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { Todo } from 'src/app/Todo';
+import { LoginfoService } from 'src/app/loginfo.service';
 
 @Component({
   selector: 'app-todo-item',
@@ -14,11 +15,16 @@ export class TodoItemComponent implements OnInit {
   @Output() todoCheckbox: EventEmitter<Todo> = new EventEmitter();
   @Output() todoedit: EventEmitter<Todo> = new EventEmitter();
   todos:Todo[];
+  public value="";
   
 
-  constructor() { }
+  constructor( public logininfoservice : LoginfoService) {
+
+  }
 
   ngOnInit(): void {
+    this.value = this.logininfoservice.getinfo();
+    
   }
   onClick(todo: Todo){
     this.todoDelete.emit(todo);
