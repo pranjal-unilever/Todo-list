@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Todo } from "../../Todo";
 import { Router } from '@angular/router';
 import { LoginfoService } from 'src/app/loginfo.service';
+import { DeletecountService } from 'src/app/deletecount.service';
 
 
 
@@ -15,11 +16,10 @@ export class TodosComponent implements OnInit {
   localItem: string;
   todos:Todo[];
   public item ="";
-  
-  
-  Count1:number;
+  extraitem: string;
+  Count1=0;
   Count2:number;
-  constructor(private router: Router,public logininfoservice : LoginfoService) { 
+  constructor(private router: Router,public logininfoservice : LoginfoService,public deletecountservice : DeletecountService) { 
     
     this.localItem = localStorage.getItem("todos");
     if(this.localItem == null){
@@ -28,14 +28,16 @@ export class TodosComponent implements OnInit {
     else{ 
       this.todos = JSON.parse(this.localItem); 
     }
+    //this.extraitem=localStorage.getItem("todos")
     
-   
-
    }
 
   ngOnInit(): void {
      
     this.item =this.logininfoservice.getinfo();
+    
+    
+   // this.localItem=localStorage.
     
   }
   editTodo(todo:Todo){
@@ -53,15 +55,19 @@ export class TodosComponent implements OnInit {
     this.todos.splice(index, 1);
     this.Count1=this.todos.length;
     localStorage.setItem("todos", JSON.stringify(this.todos));
+    this.Count1++;
+    this.logininfoservice.setinfo(this.Count1);
   }
- 
 
-  addTodo(todo:Todo){
+  
+    addTodo(todo:Todo){
     console.log(todo); 
     this.todos.push(todo); 
     this.Count1=this.todos.length;
     localStorage.setItem("todos", JSON.stringify(this.todos));
-  }
+
+    //localStorage.setItem("todos"),JSON.stringify(this.ex)
+    }
 
   toggleTodo(todo:Todo){ 
     const index = this.todos.indexOf(todo);

@@ -1,30 +1,28 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+// import { NgModule } from '@angular/core';
+// import { CommonModule } from '@angular/common';
 
-import { LoginpageComponent } from './loginpage/loginpage.component';
-import { Routes , RouterModule } from '@angular/router';
+// import { LoginpageComponent } from './loginpage/loginpage.component';
+// import { Routes , RouterModule } from '@angular/router';
 
-const routes: Routes = [
-  {
-    path:'', component:LoginpageComponent
-  }
+// const routes: Routes = [
+//   {
+//     path:'', component:LoginpageComponent
+//   }
 
-]
-
-@NgModule({
-  declarations: [
+// ]
+// @NgModule({
+//   declarations: [
      
-    LoginpageComponent
-  ],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(routes)
-  ],
+//     LoginpageComponent
+//   ],
+//   imports: [
+//     CommonModule,
+//     RouterModule.forChild(routes)
+//   ],
   
-})
-export class LoginpageModule {
-  constructor(){
-    console.log("Pranjal my name")
-
-  }
- }
+// })
+// export class LoginpageModule {
+//   constructor(){
+    
+//   }
+//  }
