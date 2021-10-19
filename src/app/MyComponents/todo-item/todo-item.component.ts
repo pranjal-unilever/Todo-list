@@ -24,8 +24,9 @@ export class TodoItemComponent implements OnInit {
 
   ngOnInit(): void {
     this.value = this.logininfoservice.getinfo();
+    console.log(this.value);
   }
-  
+
   /**
    * emit todo to tododelete event
    */

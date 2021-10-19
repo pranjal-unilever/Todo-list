@@ -19,6 +19,7 @@ export class TodosComponent implements OnInit {
   extraitem: string;
   Count1=0;
   Count2:number;
+  
   constructor(private router: Router,public logininfoservice : LoginfoService,public deletecountservice : DeletecountService) { 
     
     this.localItem = localStorage.getItem("todos");
@@ -29,6 +30,7 @@ export class TodosComponent implements OnInit {
       this.todos = JSON.parse(this.localItem); 
     }
     //this.extraitem=localStorage.getItem("todos")
+    
     
    }
 
@@ -62,8 +64,9 @@ export class TodosComponent implements OnInit {
     this.todos.splice(index, 1);
     this.Count1=this.todos.length;
     localStorage.setItem("todos", JSON.stringify(this.todos));
-    this.Count1++;
-    this.logininfoservice.setinfo(this.Count1);
+    //this.Count1++;
+    ///this.logininfoservice.setinfo(this.Count1);
+    this.Count2=this.todos.length;
   }
   /**
    * Takes the whole todo object
@@ -77,6 +80,7 @@ export class TodosComponent implements OnInit {
     this.todos.push(todo); 
     this.Count1=this.todos.length;
     localStorage.setItem("todos", JSON.stringify(this.todos));
+    this.Count2=this.todos.length;
 
     //localStorage.setItem("todos"),JSON.stringify(this.ex)
     }
@@ -93,7 +97,7 @@ export class TodosComponent implements OnInit {
     localStorage.setItem("todos", JSON.stringify(this.todos));
     console.log(todo)
   }
-  
+
 
   btnClick() {
     this.router.navigateByUrl('/');

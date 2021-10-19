@@ -13,7 +13,7 @@ export class AddTodoComponent implements OnInit {
   desc:string;
  @Output() todoAdd: EventEmitter<Todo> = new EventEmitter();
  
- Count=0;
+ 
  @Output() Countdelete:EventEmitter<number> = new EventEmitter();
   
   constructor(public deletecountservice : DeletecountService) { }
@@ -36,7 +36,7 @@ export class AddTodoComponent implements OnInit {
     console.log(this.title);
     this.todoAdd.emit(todo);
     this.title=' ';
-    this.Count++;
+    
     //this.Count=this.deletecountservice.setinfo
     }
   
