@@ -20,6 +20,12 @@ export class AddTodoComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  /**
+   * Makes todo object
+   * call todoAdd method
+   */
+
   onSubmit(){
     const todo = {
       sno: 8,

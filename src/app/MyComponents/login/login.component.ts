@@ -29,7 +29,14 @@ export class LoginComponent implements OnInit {
       password: ['', [Validators.required, Validators.minLength(5)]]
   });
   }
-  get f() { return this.registerForm.controls; }
+  get f()
+   { 
+     return this.registerForm.controls;
+   }
+   /**
+    * Navigate to Particular url on submit
+    * set method of service is called
+    */
   onSubmit () {
     this.submitted = true;
 
