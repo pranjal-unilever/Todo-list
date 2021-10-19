@@ -36,10 +36,12 @@ export class TodosComponent implements OnInit {
      
     this.item =this.logininfoservice.getinfo();
     
-    
-   // this.localItem=localStorage.
-    
   }
+  /**
+   * Takes the todo object 
+   * and edit it
+   *
+   */
   editTodo(todo:Todo){
     const idx = this.todos.indexOf(todo)
     let title = this.todos[idx].title;
@@ -49,7 +51,12 @@ export class TodosComponent implements OnInit {
     }
 
   }
-
+ 
+   /**
+    * Takes i index and splice todos array 
+    * return that todod array
+    */
+  
   deleteTodo(i: any){
     const index = i;
     this.todos.splice(index, 1);
@@ -58,9 +65,14 @@ export class TodosComponent implements OnInit {
     this.Count1++;
     this.logininfoservice.setinfo(this.Count1);
   }
-
+  /**
+   * Takes the whole todo object
+   * add that todo object in todos
+   * array
+   */
   
-    addTodo(todo:Todo){
+  addTodo(todo:Todo){
+
     console.log(todo); 
     this.todos.push(todo); 
     this.Count1=this.todos.length;
@@ -68,6 +80,11 @@ export class TodosComponent implements OnInit {
 
     //localStorage.setItem("todos"),JSON.stringify(this.ex)
     }
+
+    /**
+     * Takes the todo object and its index
+     * make it active
+     */
 
   toggleTodo(todo:Todo){ 
     const index = this.todos.indexOf(todo);
