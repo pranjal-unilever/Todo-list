@@ -26,6 +26,10 @@ export class TodoItemComponent implements OnInit {
     this.value = this.logininfoservice.getinfo();
     
   }
+  /**
+   * Takes todo object from Todo
+   * delete that todo object
+  */
   onClick(todo: Todo){
     this.todoDelete.emit(todo);
     console.log("onClick has been triggerd")
