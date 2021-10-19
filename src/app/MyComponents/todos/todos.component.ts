@@ -93,6 +93,7 @@ export class TodosComponent implements OnInit {
     localStorage.setItem("todos", JSON.stringify(this.todos));
     console.log(todo)
   }
+  
 
   btnClick() {
     this.router.navigateByUrl('/');

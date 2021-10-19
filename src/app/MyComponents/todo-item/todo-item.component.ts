@@ -24,21 +24,27 @@ export class TodoItemComponent implements OnInit {
 
   ngOnInit(): void {
     this.value = this.logininfoservice.getinfo();
-    
   }
+  
   /**
-   * Takes todo object from Todo
-   * delete that todo object
-  */
+   * emit todo to tododelete event
+   */
+  
   onClick(todo: Todo){
     this.todoDelete.emit(todo);
     console.log("onClick has been triggerd")
-   
   }
+  
+  /**
+   * emit todo to oncheckboxClick event
+   */
   onCheckboxClick(todo){
     console.log(todo)
     this.todoCheckbox.emit(todo);
   }
+  /**
+   * emit todo to todoedit event
+   */
   onClickedit(todo){
     this.todoedit.emit(todo);
 
