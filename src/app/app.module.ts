@@ -17,7 +17,8 @@ import { LoginComponent } from './MyComponents/login/login.component';
     TodosComponent,
     TodoItemComponent,
     AddTodoComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
    
     ],
   imports: [
