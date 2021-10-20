@@ -4,6 +4,7 @@ import { Todo } from "../../Todo";
 import { Router } from '@angular/router';
 import { LoginfoService } from 'src/app/loginfo.service';
 import { DeletecountService } from 'src/app/deletecount.service';
+import { NgStyle } from '@angular/common';
 
 
 
@@ -19,6 +20,7 @@ export class TodosComponent implements OnInit {
   extraitem: string;
   Count1=0;
   Count2:number;
+  Count3=0;
   
   constructor(private router: Router,public logininfoservice : LoginfoService,public deletecountservice : DeletecountService) { 
     
@@ -95,7 +97,18 @@ export class TodosComponent implements OnInit {
     // console.log(index)
     this.todos[index].active = !this.todos[index].active;
     localStorage.setItem("todos", JSON.stringify(this.todos));
-    console.log(todo)
+    if(this.todos.length==0){
+      this.Count3=0
+    }
+    console.log(todo);
+    if(this.todos[index].active){
+      this.Count3++;
+    }
+    else{
+      this.Count3--;
+
+    }
+    
   }
 
 
