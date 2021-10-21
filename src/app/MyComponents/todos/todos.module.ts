@@ -7,6 +7,7 @@ import { Todo } from 'src/app/Todo';
 import { addtodoModule } from '../add-todo/add-todo.module';
 import { todoitemModule } from '../todo-item/todo-item.module';
 import { loginModule } from 'src/app/loginpage/loginpage.module';
+import { LoginfoService } from 'src/app/loginfo.service';
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
     loginModule,
     RouterModule.forChild(routes)
   ],
+  providers: [
+    // DataService,
+    LoginfoService
+],
 
   exports: [
     TodosComponent

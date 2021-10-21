@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { Todo } from 'src/app/Todo';
+import { LoginfoService } from 'src/app/loginfo.service';
 
 
 const routes: Routes = [
@@ -22,6 +23,10 @@ const routes: Routes = [
     ReactiveFormsModule,
     RouterModule.forChild(routes)
   ],
+  providers: [
+    // DataService,
+    LoginfoService
+],
 
   exports: [
     TodoItemComponent
