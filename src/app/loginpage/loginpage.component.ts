@@ -17,7 +17,9 @@ export class LoginpageComponent implements OnInit {
 
   
 
-  constructor(private router: Router,private formBuilder: FormBuilder, public logininfoservice : LoginfoService) { }
+  constructor(private router: Router,private formBuilder: FormBuilder, public logininfoservice : LoginfoService) { 
+    console.log("loginmodule works")
+  }
 
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({

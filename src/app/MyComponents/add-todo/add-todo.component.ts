@@ -16,7 +16,9 @@ export class AddTodoComponent implements OnInit {
  
  @Output() Countdelete:EventEmitter<number> = new EventEmitter();
   
-  constructor(public deletecountservice : DeletecountService) { }
+  constructor(public deletecountservice : DeletecountService) { 
+    console.log("add todo works");
+  }
 
   ngOnInit(): void {
   }

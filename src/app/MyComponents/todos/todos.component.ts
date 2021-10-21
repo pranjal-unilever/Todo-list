@@ -34,6 +34,7 @@ export class TodosComponent implements OnInit {
     if(this.todos.length==null){
       this.Count3=0;
     }
+    console.log("todos works")
     //this.extraitem=localStorage.getItem("todos")
     
     
