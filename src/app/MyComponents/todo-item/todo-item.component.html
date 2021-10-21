@@ -1,5 +1,6 @@
 <div class="my-3"> 
     <h5 [ngClass]="{'strike': !todo.active}">{{todo.title}}</h5>
+    
     <div id=main23>
       <h5> This todo is written by:{{this.value}} </h5>
     </div>
@@ -9,10 +10,11 @@
         <input type="checkbox" class="form-check-input" id="todo{{i}}" (click)="onCheckboxClick(todo)" [checked]="!todo.active">
         <label class="form-check-label" for="todo{{i}}">Done</label>
     </div>
+
     <div id="main5">
-      
       <button class="button button1" type="button" icon="fa-minus" (click)="onClick(todo)">Delete</button>
     </div>
+
     <div id="main8">
       <button class="button button2" (click)="onClickedit(todo)"> Edit </button>
     </div>

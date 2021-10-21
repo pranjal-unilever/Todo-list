@@ -8,8 +8,9 @@ import { TodoItemComponent } from './MyComponents/todo-item/todo-item.component'
 import { AddTodoComponent } from './MyComponents/add-todo/add-todo.component';
 import { FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { HomeComponent } from './home/home.component';
-import { CommonModule } from '@angular/common';
+
 import { LoginComponent } from './MyComponents/login/login.component';
+import { loginModule } from './loginpage/loginpage.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,9 @@ import { LoginComponent } from './MyComponents/login/login.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    CommonModule
+    loginModule
+   
+    
     ],
   providers: [],
   bootstrap: [AppComponent]

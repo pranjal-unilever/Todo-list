@@ -116,16 +116,11 @@ export class TodosComponent implements OnInit {
       
     }
 
-    
-    
   }
 
 
-  btnClick() {
+btnClick() {
     this.router.navigateByUrl('/');
 };
-
-
-
 
 }
