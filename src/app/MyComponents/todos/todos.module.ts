@@ -4,7 +4,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { Todo } from 'src/app/Todo';
-
+import { addtodoModule } from '../add-todo/add-todo.module';
+import { todoitemModule } from '../todo-item/todo-item.module';
+import { loginModule } from 'src/app/loginpage/loginpage.module';
 
 const routes: Routes = [
   {
@@ -20,6 +22,9 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    addtodoModule,
+    todoitemModule,
+    loginModule,
     RouterModule.forChild(routes)
   ],
 
