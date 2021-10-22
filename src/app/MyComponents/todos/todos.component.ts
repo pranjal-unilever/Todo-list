@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Todo } from "../../Todo";
 import { Router } from '@angular/router';
 import { LoginfoService } from 'src/app/loginfo.service';
-import { DeletecountService } from 'src/app/deletecount.service';
+
 import { NgStyle } from '@angular/common';
 
 
@@ -22,7 +22,7 @@ export class TodosComponent implements OnInit {
   Count2=0;
   Count3=0;
   
-  constructor(private router: Router,public logininfoservice : LoginfoService,public deletecountservice : DeletecountService) { 
+  constructor(private router: Router,public logininfoservice : LoginfoService) { 
     
     this.localItem = localStorage.getItem("todos");
     if(this.localItem == null){

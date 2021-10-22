@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Todo } from 'src/app/Todo';
-import { DeletecountService } from 'src/app/deletecount.service';
 
 
 @Component({
@@ -16,7 +15,7 @@ export class AddTodoComponent implements OnInit {
  
  @Output() Countdelete:EventEmitter<number> = new EventEmitter();
   
-  constructor(public deletecountservice : DeletecountService) { 
+  constructor() { 
     console.log("add todo works");
   }
 

@@ -9,22 +9,19 @@ import { TodoItemComponent } from './MyComponents/todo-item/todo-item.component'
 import { FormsModule,ReactiveFormsModule} from '@angular/forms';
 //import { HomeComponent } from './home/home.component';
 
-import { LoginComponent } from './MyComponents/login/login.component';
+//import { LoginComponent } from './MyComponents/login/login.component';
 import { loginModule } from './loginpage/loginpage.module';
 import { addtodoModule } from './MyComponents/add-todo/add-todo.module';
 import { todosModule } from './MyComponents/todos/todos.module';
 import { todoitemModule } from './MyComponents/todo-item/todo-item.module';
-
+import { LoginfoService } from './loginfo.service';
+//import { LoginpageComponent } from './loginpage/loginpage.component';
 @NgModule({
   declarations: [
     AppComponent,
     
-   
-   
-    LoginComponent,
   
-   
-    ],
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -37,7 +34,9 @@ import { todoitemModule } from './MyComponents/todo-item/todo-item.module';
    
     
     ],
-  providers: [],
+  providers: [
+  LoginfoService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

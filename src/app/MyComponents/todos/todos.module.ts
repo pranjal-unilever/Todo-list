@@ -30,7 +30,8 @@ const routes: Routes = [
   ],
   providers: [
     // DataService,
-    LoginfoService
+    LoginfoService,
+    Todo
 ],
 
   exports: [
