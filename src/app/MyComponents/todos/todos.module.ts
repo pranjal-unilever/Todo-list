@@ -8,6 +8,8 @@ import { addtodoModule } from '../add-todo/add-todo.module';
 import { todoitemModule } from '../todo-item/todo-item.module';
 import { loginModule } from 'src/app/loginpage/loginpage.module';
 import { LoginfoService } from 'src/app/loginfo.service';
+import { TodoItemComponent } from '../todo-item/todo-item.component';
+import { AddTodoComponent } from '../add-todo/add-todo.component';
 
 const routes: Routes = [
   {
@@ -17,7 +19,8 @@ const routes: Routes = [
 ]
 @NgModule({
   declarations: [
-    TodosComponent
+    TodosComponent,
+   
   ],
   imports: [
     CommonModule,
@@ -25,6 +28,7 @@ const routes: Routes = [
     ReactiveFormsModule,
     addtodoModule,
     todoitemModule,
+    
     loginModule,
     RouterModule.forChild(routes)
   ],
