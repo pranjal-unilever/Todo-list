@@ -4,6 +4,9 @@ import { FormsModule,ReactiveFormsModule} from '@angular/forms';
 
 import { LoginpageComponent } from './loginpage.component';
 import { Routes , RouterModule } from '@angular/router';
+import { TodosComponent } from '../MyComponents/todos/todos.component';
+import { AddTodoComponent } from '../MyComponents/add-todo/add-todo.component';
+import { TodoItemComponent } from '../MyComponents/todo-item/todo-item.component';
 
 
 const routes: Routes = [
@@ -14,7 +17,11 @@ const routes: Routes = [
 ]
 @NgModule({
   declarations: [
-    LoginpageComponent
+    LoginpageComponent,
+    TodosComponent,
+    AddTodoComponent,
+    TodoItemComponent
+
   ],
   imports: [
     CommonModule,
