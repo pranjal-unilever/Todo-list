@@ -16,6 +16,7 @@ import { loginModule } from './loginpage/loginpage.module';
 // import { todoitemModule } from './MyComponents/todo-item/todo-item.module';
 import { LoginfoService } from './loginfo.service';
 //import { LoginpageComponent } from './loginpage/loginpage.component';
+//import {HttpMo
 @NgModule({
   declarations: [
     AppComponent,
