@@ -17,11 +17,13 @@ import { loginModule } from './loginpage/loginpage.module';
 // import { todosModule } from './MyComponents/todos/todos.module';
 // import { todoitemModule } from './MyComponents/todo-item/todo-item.module';
 import { LoginfoService } from './loginfo.service';
+import { PostComponent } from './MyComponents/post/post.component';
 //import { LoginpageComponent } from './loginpage/loginpage.component';
 //import {HttpMo
 @NgModule({
   declarations: [
     AppComponent,
+    PostComponent,
     
   ],
   
