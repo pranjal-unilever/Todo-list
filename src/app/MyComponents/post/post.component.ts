@@ -12,7 +12,7 @@ export class PostComponent implements OnInit {
   constructor(private todoservice:TodoService) { }
 
   ngOnInit(): void {
-    this.todoservice.gettodo().subscribe(data => this.comments = data);
+    this.todoservice.gettodo().subscribe(data => this.comments=data);
   }
 
 }
