@@ -124,4 +124,8 @@ btnClick() {
     this.router.navigateByUrl('/');
 };
 
+btn1Click(){
+  this.router.navigateByUrl('Post');
+}
+
 }

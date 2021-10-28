@@ -9,7 +9,7 @@ import { PostidService } from 'src/app/postid.service';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent implements OnInit {
-  public comments =  [];
+  comments: any = [];
   id1:number;
   
   constructor(private todoservice:TodoService,private postidservice :PostidService) { }
