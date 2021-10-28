@@ -1,7 +1,20 @@
-<h1>{{this.id1}}</h1>
-<ul *ngFor="let comment of comments ,index as id1">
+
+<ul *ngFor="let comment of comments">
     
-    <li> {{comment.postId}}.{{comment.id}}.{{comment.name}}.{{comment.email}}. {{comment.body}} </li>
+    <!-- <li> {{comment.postId}}.{{comment.id}}.{{comment.name}}.{{comment.email}}. {{comment.body}} </li> -->
     
+    <div *ngif="this.id1==={{comment.id}}">;
+
+        <li> {{comment.postId}}.{{comment.id}}.{{comment.name}}.{{comment.email}}. {{comment.body}} </li>
+
+    </div>
 </ul>
 
+
+
+<!-- for (let obj of arr) {
+    console.log("object:", obj);
+    for (let key in obj) {
+        console.log("      key:", key, "value:", obj[key]);
+    }
+} -->

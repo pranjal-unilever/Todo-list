@@ -25,11 +25,11 @@ export class AddTodoComponent implements OnInit {
 
   
   constructor(public postidservice:PostidService) { 
-    console.log("add todo works");
+    
   }
 
   ngOnInit(): void {
-    this.postidservice.setid(this.post1)
+    
   }
 
   /**
@@ -44,6 +44,9 @@ export class AddTodoComponent implements OnInit {
      
       active: true
     }
+    this.postidservice.setid(this.post1)
+    console.log("add todo works");
+    console.log(this.post1)
     console.log(this.title);
     this.todoAdd.emit(todo);
     this.title=' ';
