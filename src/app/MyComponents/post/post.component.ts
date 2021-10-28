@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { TodoService } from 'src/app/todo.service';
+import { todojson } from 'src/app/todojson';
 
 @Component({
   selector: 'app-post',
@@ -8,6 +9,7 @@ import { TodoService } from 'src/app/todo.service';
 })
 export class PostComponent implements OnInit {
   public comments =  [];
+  @Input
 
   constructor(private todoservice:TodoService) { }
 
