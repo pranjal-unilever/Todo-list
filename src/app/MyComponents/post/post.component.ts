@@ -9,8 +9,7 @@ import { todojson } from 'src/app/todojson';
 })
 export class PostComponent implements OnInit {
   public comments =  [];
-  @Input
-
+  
   constructor(private todoservice:TodoService) { }
 
   ngOnInit(): void {

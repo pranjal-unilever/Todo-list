@@ -11,15 +11,15 @@ import { todojson } from 'src/app/todojson';
 export class AddTodoComponent implements OnInit {
   title:string;
   desc:string;
-  post1:number
+  
   
  @Output() todoAdd: EventEmitter<Todo> = new EventEmitter();
  
  
  @Output() Countdelete:EventEmitter<number> = new EventEmitter();
 
- @Output () postid:EventEmitter<number>= new EventEmitter();
 
+ 
 
   
   constructor() { 
@@ -27,7 +27,6 @@ export class AddTodoComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.postid.emit(this.post1);
   }
 
   /**
