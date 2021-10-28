@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Todo } from 'src/app/Todo';
 import { todojson } from 'src/app/todojson';
+import { PostidService } from 'src/app/postid.service';
 
 
 @Component({
@@ -11,6 +12,7 @@ import { todojson } from 'src/app/todojson';
 export class AddTodoComponent implements OnInit {
   title:string;
   desc:string;
+  post1:number
   
   
  @Output() todoAdd: EventEmitter<Todo> = new EventEmitter();
@@ -22,11 +24,12 @@ export class AddTodoComponent implements OnInit {
  
 
   
-  constructor() { 
+  constructor(public postidservice:PostidService) { 
     console.log("add todo works");
   }
 
   ngOnInit(): void {
+    this.postidservice.setid(this.post1)
   }
 
   /**

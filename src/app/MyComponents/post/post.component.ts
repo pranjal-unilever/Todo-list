@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { TodoService } from 'src/app/todo.service';
 import { todojson } from 'src/app/todojson';
+import { PostidService } from 'src/app/postid.service';
 
 @Component({
   selector: 'app-post',
@@ -9,11 +10,13 @@ import { todojson } from 'src/app/todojson';
 })
 export class PostComponent implements OnInit {
   public comments =  [];
+  id1:number;
   
-  constructor(private todoservice:TodoService) { }
+  constructor(private todoservice:TodoService,private postidservice :PostidService) { }
 
   ngOnInit(): void {
     this.todoservice.gettodo().subscribe(data => this.comments=data);
+    this.id1=this.postidservice.getid();
   }
 
 }
