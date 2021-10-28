@@ -1,5 +1,5 @@
-<h1>Comments</h1>
-<ul *ngFor="let comment of comments ">
+<h1>{{this.id1}}</h1>
+<ul *ngFor="let comment of comments ,index as id1">
     
     <li> {{comment.postId}}.{{comment.id}}.{{comment.name}}.{{comment.email}}. {{comment.body}} </li>
     

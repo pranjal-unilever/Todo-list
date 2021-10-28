@@ -17,6 +17,7 @@ export class PostComponent implements OnInit {
   ngOnInit(): void {
     this.todoservice.gettodo().subscribe(data => this.comments=data);
     this.id1=this.postidservice.getid();
+    console.log(this.id1);
   }
 
 }

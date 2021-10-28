@@ -12,7 +12,7 @@ import { PostidService } from 'src/app/postid.service';
 export class AddTodoComponent implements OnInit {
   title:string;
   desc:string;
-  post1:number
+  post1:number;
   
   
  @Output() todoAdd: EventEmitter<Todo> = new EventEmitter();
