@@ -1,13 +1,20 @@
-
+<h1>{{this.id1}}</h1>
 <ul *ngFor="let comment of comments">
     
     <!-- <li> {{comment.postId}}.{{comment.id}}.{{comment.name}}.{{comment.email}}. {{comment.body}} </li> -->
-    
-    <div *ngif="this.id1==={{comment.id}}">;
+    <div *ngif="this.id1===comment.id; else elseBlock">
+        
 
         <li> {{comment.postId}}.{{comment.id}}.{{comment.name}}.{{comment.email}}. {{comment.body}} </li>
 
     </div>
+     
+    
+    <ng-template #elseBlock>
+        <h1>
+            post id did not present
+        </h1>
+    </ng-template>
 </ul>
 
 

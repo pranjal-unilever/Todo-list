@@ -12,6 +12,7 @@ export class PostComponent implements OnInit {
   comments: any = [];
   id1:number;
   
+  
   constructor(private todoservice:TodoService,private postidservice :PostidService) { }
 
   ngOnInit(): void {
