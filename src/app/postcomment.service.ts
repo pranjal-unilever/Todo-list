@@ -7,7 +7,7 @@ import { Observable, observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PostcommentService {
-  private _url:String = "/assets/data/todocomment.json";
+  private _url:string = "/assets/data/todocomment.json";
 
   constructor(private http:HttpClient) { }
   gettodocomment():Observable<todocommentjson[]>{

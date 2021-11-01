@@ -5,6 +5,14 @@
     
 </ul>
 
+<h2>
+    The comments for {{this.id1}} are:
+</h2>
+<ul *ngFor="let commentpost of commentspost">
+    <li> {{commentspost.postId}}.{{commentspost.id}}.{{commentspost.name}}.{{commentspost.email}}.{{commentspost.body}}</li>
+
+</ul>
+
 
 
 <!-- for (let obj of arr) {
