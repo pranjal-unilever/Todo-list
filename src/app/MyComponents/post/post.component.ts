@@ -25,7 +25,11 @@ export class PostComponent implements OnInit {
   constructor(private todoservice:TodoService,private postidservice :PostidService,private postcommentservice :PostcommentService){
     
    }
-
+  
+/**
+ * Take data through service and fill it into
+ * respective arrays
+ */
   ngOnInit(): void {
     this.id1=this.postidservice.getid();
     this.todoservice.gettodo().subscribe((data: any) => 

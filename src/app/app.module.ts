@@ -18,6 +18,8 @@ import { loginModule } from './loginpage/loginpage.module';
 // import { todoitemModule } from './MyComponents/todo-item/todo-item.module';
 import { LoginfoService } from './loginfo.service';
 import { PostComponent } from './MyComponents/post/post.component';
+
+//import { PostComponent } from './MyComponents/post/post.component';
 //import { LoginpageComponent } from './loginpage/loginpage.component';
 //import {HttpMo
 @NgModule({
@@ -34,7 +36,9 @@ import { PostComponent } from './MyComponents/post/post.component';
     ReactiveFormsModule,
     loginModule,
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+   
+
     
    ],
   providers: [

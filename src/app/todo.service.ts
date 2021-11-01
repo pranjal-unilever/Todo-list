@@ -7,7 +7,7 @@ import { Observable, observable } from 'rxjs';
   providedIn: 'root'
 })
 export class TodoService {
-  private _url: string = "/assets/data/todoget.json";
+  private _url: string = "/assets/data/todocomment.json";
 
   constructor(private http:HttpClient) { }
   gettodo():Observable<todojson[]>{

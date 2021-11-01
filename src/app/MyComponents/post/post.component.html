@@ -1,17 +1,23 @@
-<h1>{{this.id1}}</h1>
+<div id=post12>
 <ul *ngFor="let comment of comments">
     
-    <li> {{comment.postId}}.{{comment.id}}.{{comment.name}}.{{comment.email}}. {{comment.body}} </li>
+    <li> Post postid is : {{comment.postId}}<li><br>
+    <li> Post id is : {{comment.id}}</li><br>
+    <li> Post name is : {{comment.name}}</li><br>
+    <li> Post email is : {{comment.email}}</li><br>
+    <li> Post body is : {{comment.body}}</li><br>
+
     
 </ul>
+</div>
 
-<h2>
+<!-- <h2>
     The comments for {{this.id1}} are:
 </h2>
 <ul *ngFor="let commentpost of commentspost">
-    <li> {{commentspost.postId}}.{{commentspost.id}}.{{commentspost.name}}.{{commentspost.email}}.{{commentspost.body}}</li>
+    <li>Post id is: {{commentspost.postId}}.{{commentspost.id}}.{{commentspost.name}}.{{commentspost.email}}.{{commentspost.body}}</li>
 
-</ul>
+</ul> -->
 
 
 
